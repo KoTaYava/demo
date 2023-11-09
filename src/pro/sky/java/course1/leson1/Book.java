@@ -40,14 +40,14 @@ public class Book {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || this.getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return title.equals(book.title);
+        return title.equals(book.title) && author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(title);
+        return java.util.Objects.hash(title,author);
 
     }
 }

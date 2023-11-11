@@ -23,6 +23,7 @@ public class Author {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (other == null || this.getClass() != other.getClass()) {
+
             return false;
         }
         Author author = (Author) other;
